@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
-import { View, Text, StyleSheet, TextInput, FlatList } from 'react-native';
-import BottomTabBar from '../components/BottomTabBar';
-import SneakerCard from '../components/SneakerCard';
-import { ProductContext } from '../context/ProductContext';
-import { useNavigation } from '@react-navigation/native';
+import React, { useContext } from 'react'
+import { View, Text, StyleSheet, TextInput, FlatList } from 'react-native'
+import BottomTabBar from '../components/BottomTabBar'
+import SneakerCard from '../components/SneakerCard'
+import { ProductContext } from '../context/ProductContext'
+import { useNavigation } from '@react-navigation/native'
 
 export default function SearchScreen() {
-  const { searchQuery, setSearchQuery, searchResults } = useContext(ProductContext);
-  const navigation = useNavigation();
+  const { searchQuery, setSearchQuery, searchResults } = useContext(ProductContext)
+  const navigation = useNavigation()
 
   return (
     <View style={styles.container}>
@@ -66,12 +66,12 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
   },
   list: {
-    justifyContent: 'space-between', // Añade espacio entre las columnas
+    justifyContent: 'space-between',
   },
   noResults: {
     fontSize: 18,
     color: '#888',
     marginTop: 20,
-    textAlign: 'center', // Centra el texto
+    textAlign: 'center',
   },
 });

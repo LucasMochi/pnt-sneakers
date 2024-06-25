@@ -1,14 +1,14 @@
-import React, { useContext } from 'react';
-import { AuthContext } from '../context/AuthContext';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import BottomTabBar from '../components/BottomTabBar';
-import AntDesign from '@expo/vector-icons/AntDesign';
+import React, { useContext } from 'react'
+import { AuthContext } from '../context/AuthContext'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import BottomTabBar from '../components/BottomTabBar'
+import AntDesign from '@expo/vector-icons/AntDesign'
 
 export default function UserScreen() {
 
   const { user, logout } = useContext(AuthContext)
-  const navigation = useNavigation();
+  const navigation = useNavigation()
 
   return (
     <View style={styles.container}>

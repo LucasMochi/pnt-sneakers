@@ -1,15 +1,15 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { View, Text, Button, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
-import { useNavigation, NavigationContainer } from '@react-navigation/native';
-import { AuthContext } from "../context/AuthContext.js";
+import React, { useContext, useEffect, useState } from 'react'
+import { View, Text, Button, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
+import { useNavigation, NavigationContainer } from '@react-navigation/native'
+import { AuthContext } from "../context/AuthContext.js"
 
 export default function RegisterScreen() {
     
     const {status, register} = useContext(AuthContext)
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
     const navigation = useNavigation()
 

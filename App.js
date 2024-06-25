@@ -1,19 +1,19 @@
-import { useContext } from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { AuthProvider } from './context/AuthContext';
-import { AuthContext } from './context/AuthContext';
-import LoginScreen from './screens/LoginScreen';
-import RegisterScreen from './screens/RegisterScreen';
-import HomeScreen from './screens/HomeScreen';
-import SearchScreen from './screens/SearchScreen';
-import UserScreen from './screens/UserScreen';
-import FavScreen from './screens/FavScreen';
-import ProductScreen from './screens/ProductScreen';
-import ShopKartScreen from './screens/ShopKartScreen';
-import { ProductProvider } from './context/ProductContext';
+import { useContext } from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
+import { AuthProvider } from './context/AuthContext'
+import { AuthContext } from './context/AuthContext'
+import LoginScreen from './screens/LoginScreen'
+import RegisterScreen from './screens/RegisterScreen'
+import HomeScreen from './screens/HomeScreen'
+import SearchScreen from './screens/SearchScreen'
+import UserScreen from './screens/UserScreen'
+import FavScreen from './screens/FavScreen'
+import ProductScreen from './screens/ProductScreen'
+import ShopKartScreen from './screens/ShopKartScreen'
+import { ProductProvider } from './context/ProductContext'
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator()
 
 function AppNavigator(){
   const { status } = useContext(AuthContext)

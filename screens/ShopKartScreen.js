@@ -1,13 +1,13 @@
-import React, { useContext, useEffect } from 'react';
-import { FlatList, View, StyleSheet, Text, TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { ProductContext } from '../context/ProductContext';
-import SneakerCard from '../components/SneakerCard';
+import React, { useContext, useEffect } from 'react'
+import { FlatList, View, StyleSheet, Text, TouchableOpacity } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import { ProductContext } from '../context/ProductContext'
+import SneakerCard from '../components/SneakerCard'
 
 export default function ShopKartScreen() {
 
-  const { shopKart, isInShopKart, removeShopKart, loadProducts } = useContext(ProductContext);
-  const navigation = useNavigation();
+  const { shopKart, isInShopKart, removeShopKart, loadProducts } = useContext(ProductContext)
+  const navigation = useNavigation()
 
   useEffect(() => {
     loadProducts();

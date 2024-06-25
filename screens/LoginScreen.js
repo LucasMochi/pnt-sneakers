@@ -1,26 +1,26 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { View, Text, Button, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
-import { useNavigation, NavigationContainer } from '@react-navigation/native';
-import { AuthContext } from '../context/AuthContext';
+import React, { useContext, useEffect, useState } from 'react'
+import { View, Text, Button, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
+import { useNavigation, NavigationContainer } from '@react-navigation/native'
+import { AuthContext } from '../context/AuthContext'
 
 export default function LoginScreen() {
 
-    const { status, login } = useContext(AuthContext);
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const { status, login } = useContext(AuthContext)
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
-    const navigation = useNavigation();
+    const navigation = useNavigation()
 
     const handleLogin = async () => {
         await login(email, password)
         if (status === 'authenticated') {
-            navigation.navigate('Home');
+            navigation.navigate('Home')
         }
     };
 
     useEffect(() => {
         if (status === "authenticated") {
-            navigation.navigate("Home");
+            navigation.navigate("Home")
         }
     }, [status, navigation])
 

@@ -1,14 +1,14 @@
-import React, { useContext, useEffect } from 'react';
-import { FlatList, View, StyleSheet, Text, ScrollView } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { ProductContext } from '../context/ProductContext';
-import SneakerCard from '../components/SneakerCard';
-import BottomTabBar from '../components/BottomTabBar';
+import React, { useContext, useEffect } from 'react'
+import { FlatList, View, StyleSheet, Text, ScrollView } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import { ProductContext } from '../context/ProductContext'
+import SneakerCard from '../components/SneakerCard'
+import BottomTabBar from '../components/BottomTabBar'
 
 export default function HomeScreen() {
 
-  const { products, loadProducts, getTopFavs, getMostRecent, getMostExpensive } = useContext(ProductContext);
-  const navigation = useNavigation();
+  const { loadProducts, getTopFavs, getMostRecent, getMostExpensive } = useContext(ProductContext)
+  const navigation = useNavigation()
 
   useEffect(() => {
     loadProducts();

@@ -1,17 +1,17 @@
-import React, { useContext, useEffect } from 'react';
-import { FlatList, View, StyleSheet, Text } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { ProductContext } from '../context/ProductContext';
-import SneakerCard from '../components/SneakerCard';
+import React, { useContext, useEffect } from 'react'
+import { FlatList, View, StyleSheet, Text } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import { ProductContext } from '../context/ProductContext'
+import SneakerCard from '../components/SneakerCard'
 
 export default function FavScreen() {
 
-  const { favs, loadProducts } = useContext(ProductContext);
-  const navigation = useNavigation();
+  const { favs, loadProducts } = useContext(ProductContext)
+  const navigation = useNavigation()
 
   useEffect(() => {
-    loadProducts();
-  }, []);
+    loadProducts()
+  }, [])
 
   return (
     <View style={styles.container}>

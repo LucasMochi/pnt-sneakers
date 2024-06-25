@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
-import AntDesign from '@expo/vector-icons/AntDesign';
-import { ProductContext } from '../context/ProductContext';
+import React, { useContext } from 'react'
+import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native'
+import AntDesign from '@expo/vector-icons/AntDesign'
+import { ProductContext } from '../context/ProductContext'
 
 export default function SneakerCard({sneaker, onPress}) {
-  const { addFav, removeFav, isFav } = useContext(ProductContext);
+  const { addFav, removeFav, isFav } = useContext(ProductContext)
 
   const handleFav = () => {
     if (isFav(sneaker.id)) {

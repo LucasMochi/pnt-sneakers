@@ -1,11 +1,11 @@
 import React, { createContext, useEffect, useState } from 'react'
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
     export const AuthContext = createContext()
 
     export const AuthProvider = ({ children }) => {
 
-    const [status, setStatus] = useState("checking");
+    const [status, setStatus] = useState("checking")
     const [user, setUser] = useState({});
 
     useEffect(() => {
@@ -24,7 +24,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
     const register = async (email, password, firstName, lastName) => {
 
         if (!email || !password || !firstName || !lastName) {
-            alert('Por favor completa todos los campos');
+            alert('Por favor completa todos los campos')
             return;
         }
 
@@ -45,7 +45,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
             if(respuesta.ok){
                 alert('Registro Exitoso')
             } else {
-                alert('Error al registrarse');
+                alert('Error al registrarse')
             }
         } catch (error) {
             alert('Error al registrarse')
@@ -75,7 +75,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
     }
 
     const logout = async () => {
-        await AsyncStorage.removeItem('isAuthenticated');
+        await AsyncStorage.removeItem('isAuthenticated')
         setStatus('unauthenticated')
     }
 

@@ -1,20 +1,20 @@
-import React, { useContext, useEffect } from 'react';
-import { ProductContext } from '../context/ProductContext';
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
-import AntDesign from '@expo/vector-icons/AntDesign';
-import { useNavigation } from '@react-navigation/native';
+import React, { useContext, useEffect } from 'react'
+import { ProductContext } from '../context/ProductContext'
+import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native'
+import AntDesign from '@expo/vector-icons/AntDesign'
+import { useNavigation } from '@react-navigation/native'
 
-export default function ProductScreen({ route  }) {
-  const navigation = useNavigation();
-  const { sneaker } = route.params;
+export default function ProductScreen({ route }) {
+  const navigation = useNavigation()
+  const { sneaker } = route.params
 
-  const { addFav, removeFav, isFav, addShopKart, isInShopKart } = useContext(ProductContext);
+  const { addFav, removeFav, isFav, addShopKart, isInShopKart } = useContext(ProductContext)
 
   const handleFav = () => {
     if (isFav(sneaker.id)) {
-      removeFav(sneaker.id);
+      removeFav(sneaker.id)
     } else {
-      addFav(sneaker);
+      addFav(sneaker)
     }
   };
 
