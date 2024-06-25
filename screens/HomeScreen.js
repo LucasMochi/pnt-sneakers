@@ -33,6 +33,7 @@ export default function HomeScreen() {
           />
         )}
         contentContainerStyle={styles.list}
+        scrollEnabled={false}
       />
 
       <Text style={styles.sectionTitle}>Mas Recientes</Text>
@@ -47,6 +48,7 @@ export default function HomeScreen() {
           />
         )}
         contentContainerStyle={styles.list}
+        scrollEnabled={false}
       />
 
       <Text style={styles.sectionTitle}>Mas Caras</Text>
@@ -61,6 +63,7 @@ export default function HomeScreen() {
           />
         )}
         contentContainerStyle={styles.list}
+        scrollEnabled={false}
       />
       </ScrollView>
       <BottomTabBar />
